@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="bg-slate-400 h-screen flex justify-center items-center">
+    <div
+      class="max-w-[1440px] mx-auto flex flex-col gap-5 bg-white rounded-3xl px-16 py-8 transition-all"
+      style="border-bottom-right-radius: 250px"
+    >
+      <div class="flex justify-between gap-3 flex-col lg:flex-row">
+        <div class="flex flex-col w-[400px]">
+          <label
+            class="font-semibold text-xl py-1 tracking-widest text-gray-500"
+            for="day"
+            >Day</label
+          >
+          <input
+            class="text-[32px] border-gray-300 border-2 rounded-xl px-3 font-bold focus:outline-purple-600"
+            type="number"
+            name="day"
+            min="1"
+            max="31"
+            id="day"
+            placeholder="DD"
+          />
+          <p class="text-red-500 text-xl px-3 font-semibold" id="day-error"></p>
+        </div>
+        <div class="flex flex-col w-[400px]">
+          <label
+            class="font-semibold text-xl py-1 tracking-widest text-gray-500"
+            for="month"
+            >Month</label
+          >
+          <input
+            class="text-[32px] border-gray-300 border-2 rounded-xl px-3 font-bold focus:outline-purple-600"
+            type="number"
+            name="month"
+            id="month"
+            min="1"
+            max="12"
+            placeholder="MM"
+          />
+          <p
+            class="text-red-500 text-xl px-3 font-semibold"
+            id="month-error"
+          ></p>
+        </div>
+        <div class="flex flex-col w-[400px]">
+          <label
+            class="font-semibold text-xl py-1 tracking-widest text-gray-500"
+            for="year"
+            >Year</label
+          >
+          <input
+            class="text-[32px] border-gray-300 border-2 rounded-xl px-3 font-bold focus:outline-purple-600"
+            type="number"
+            name="year"
+            id="year"
+            min="1900"
+            max="2023"
+            placeholder="YYYY"
+          />
+          <p
+            class="text-red-500 text-xl px-3 font-semibold"
+            id="year-error"
+          ></p>
+        </div>
+      </div>
+      <div class="flex justify-end">
+        <button
+          id="submit-btn"
+          class="p-6 rounded-full bg-purple-500 text-white text-3xl hover:bg-slate-700 transition-all"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="46"
+            height="44"
+            viewBox="0 0 46 44"
+          >
+            <g fill="none" stroke="#FFF" stroke-width="2">
+              <path
+                d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
+      <div class="">
+        <div class="flex">
+          <h3 class="text-[94px] font-bold italic">
+            <span class="text-purple-500" id="calc-year">--</span>
+            <span>years</span>
+          </h3>
+        </div>
+        <div class="flex">
+          <h3 class="text-[94px] font-bold italic">
+            <span class="text-purple-500" id="calc-month">--</span>
+            <span>months</span>
+          </h3>
+        </div>
+        <div class="flex">
+          <h3 class="text-[94px] font-bold italic">
+            <span class="text-purple-500" id="calc-day">--</span>
+            <span>days</span>
+          </h3>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://twitter.com/Ayhammesho2" target="_blank">Ayham Mesho</a
+        >.
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
